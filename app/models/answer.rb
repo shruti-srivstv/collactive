@@ -1,7 +1,7 @@
 class Answer < ApplicationRecord
 	belongs_to :poll
 
-	attr_accessor :title, :id
+	# attr_accessor :title, :id
 
 	def self.get_aggr(poll_id)
 		@answers = Answer.where(:poll_id => poll_id)
