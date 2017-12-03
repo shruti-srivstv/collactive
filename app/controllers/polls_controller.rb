@@ -2,7 +2,7 @@ class PollsController < ApplicationController
 
 	def get
 		@poll = Poll.find(params[:poll_id])
-		@answers = Answer.get_aggr(:poll_id => @poll.id)
+		@answers = Answer.get_aggr(@poll.id)
 		send_response(:status => "ok", :poll => @poll, :answers => @answers)
 	end
 
