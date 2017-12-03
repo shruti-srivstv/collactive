@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  root to: 'welcome#index'
 
   post 'poll/get/org' => 'polls#get_org'
   post 'poll/get' => 'polls#get'
