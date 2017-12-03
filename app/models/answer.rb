@@ -10,5 +10,6 @@ class Answer < ApplicationRecord
 			count = Vote.where(:answer_id => a.id, :poll_id => poll_id).count
 			ans_aggr.push({:id => a.id, :title => a.title, :count => count})
 		end
+		ans_aggr
 	end
 end
