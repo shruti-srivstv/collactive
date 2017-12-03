@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 	respond_to do |format|
     	# msg  { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
     	format.json  { render :json => msg }
-    	format.html { render :status => "ok", :message => "Success!", :html => "<h1> Welcome to Collactive</h1>"}
+    	format.html { render :html => "<h1> Welcome to Collactive</h1>"}
 	end
   end
 
